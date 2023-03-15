@@ -7,4 +7,8 @@ router.get('/', (req, res) => {
   res.render('index', { title: 'The Book List' });
 });
 
+router.get("/healthz", (req, res) => {
+  res.status(200).send("OK")
+})
+
 module.exports = router;
